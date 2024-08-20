@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temperature.css">
+    <title>temperature conversion</title>
+</head>
+<body>
+    <div class="container" >
+        <h2 class="title">Temperature<br> Conversion:</h2>
+        <form >
+            <input type="text" id="question" class="display " required> 
+            <input type="text" id="answer"  class="display" readonly>
+        </form>
+        <button type="button" id="convert" onclick="convert()">Convert</button><br>
+        <button type="button" id="clear">Clear</button>
+    </div>
+
+    <div class="option">
+        <h1 class="direction"> Enter your type of conversion</h1>
+        <select name="select" id="select" onchange="updateUnits()">
+            <option value="c_to_f">Degree Celcius to Farenheit</option>
+            <option value="f_to_c">Farenheit to Degree Celcius</option>
+            <option value="c_to_k">Degree Celcius to Kelvin</option>
+            <option value="k_to_c">kelvin to Degree Celcius</option>
+            <option value="f_to_k">Farenheit to Kelvin</option>
+            <option value="k_to_f">kelvin to Farenheit</option>
+        </select>
+    </div>
+    <div class="animation">
+        <div class="loader"></div>
+        <div class="loader"></div>
+    </div>
+    <div class="paragraph">
+        <p class="definition">Temperature conversion refers to the process of converting a temperature reading from one unit of measurement to another. The most common temperature scales are Celsius (°C), Fahrenheit (°F), and Kelvin (K). Here are the formulas for converting between these scales:</p>
+        <div class="formulas"></div>
+            <p>1. Celsius to Fahrenheit:</p>
+            <p>F = (9/5 * C) + 32</p>
+            <p>Where C is the temperature in Celsius and F is the temperature in Fahrenheit.</p>
+            <p>2. Fahrenheit to Celsius:</p>
+            <p>C = 5/9 * (F - 32)</p>
+            <p>Where F is the temperature in Fahrenheit C is the temperature in Celsius. </p>
+            <p>3. Celsius to Kelvin:</p>
+            <p>K = C + 273.15p>
+            <p>Where C is the temperature in Celsius k is the temperature in Kelvin </p>
+            <p>4. Kelvin to Celsius:</p>
+            <p>C = K - 273.15p>
+            <p>Where k is the temperature in Kelvin  C is the temperature in Celsius.</p>
+            <p>5. Fahrenheit to Kelvin:</p>
+            <p>K = (5/9 * (F - 32) + 273.15)<p>
+            <p>Where F is the temperature in Fahrenheit k is the temperature in Kelvin.</p>
+            <p>6. Kelvin to Fahrenheit:</p>
+            <p>F = (9/5 * (K - 273.15) + 32)<p>
+            <p>Where k is the temperature in Kelvin. F is the temperature in Fahrenheit.</p>
+        </div>
+    </div>
+</body>
+<script src="temperature.js"></script>
+</html>  

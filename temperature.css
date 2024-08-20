@@ -1,0 +1,141 @@
+:root{
+    --color: linear-gradient(to right,rgb(255, 192, 236),rgba(255, 0, 0, 0.589));
+}
+*{
+    margin:10px 20px;
+    font-family: verdana;
+}
+body{
+    background-image: var(--color);
+}
+
+.option{
+    width:500px;
+    height: 200px;
+    position:absolute;
+    top: 250px;
+    left: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px 2px gray;
+    background-image: var(--color);
+}
+.direction{
+    position:relative;
+    top: 20px;
+    display: inline;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+select{
+    font-size: 20px;
+    position:relative;
+    top: 30px;
+    background-color: whitesmoke;
+    display: inline;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container{
+    width:350px;
+    height: 340px;
+    background-color: white;
+    position:absolute;
+    left:900px;
+    top: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px gray;
+    text-align: center;
+    font-family: verdana;
+    padding:20px;
+    background-image: var(--color);
+}
+form{
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    gap:10px;
+}
+.title{
+    color:rgba(4, 0, 255, 0.53);
+    margin-bottom: 20px;
+}
+.display{
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+#convert{
+    width: 100px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    margin-bottom: 0px;
+}
+#clear{
+    width: 80px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+}
+/* HTML: <div class="loader"></div> */
+/* css loader.com*/
+.animation{
+    display:flex;
+    justify-content: space-between;
+}
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid lightblue;
+    border-right-color: orange;
+    animation: loader 1s infinite linear;
+  }
+  @keyframes loader{to{transform: rotate(1turn)}}
+
+  .formulas {
+    width:500px;
+    height: 500px;
+    position: relative;
+    top:1000px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+    .option, .container {
+        width: 90%;
+        height: auto;
+        left: 5%;
+        top: auto;
+        position: relative;
+        margin: 20px 0;
+    }
+    .formulas {
+        width: 90%;
+        height: auto;
+        top: auto;
+        position: relative;
+        margin: 20px 0;
+    }
+    .display {
+        width: 100%;
+        margin-left: 0;
+        font-size: 18px;
+    }
+    select, .direction, #convert, #clear {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
